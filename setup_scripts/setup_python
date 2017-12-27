@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo
+echo "---------------"
+echo "Installing pip3"
+echo "---------------"
+echo
+
+sudo apt-get -y install python3-pip
+
+echo
+echo "-----------------------"
+echo "Installing oauth2client"
+echo "-----------------------"
+echo
+echo "Note: oauth2client is now deprecated. No more features will be added to the"
+echo "libraries and the core team is turning down support. We recommend you use"
+echo "  google-auth -- https://google-auth.readthedocs.io/en/latest/"
+echo "  oauthlib -- http://oauthlib.readthedocs.io/en/latest/ "
+echo "For more details on the deprecation, see oauth2client deprecation."
+echo "  https://google-auth.readthedocs.io/en/latest/oauth2client-deprecation.html"
+echo
+sudo pip3 install --upgrade oauth2client
+

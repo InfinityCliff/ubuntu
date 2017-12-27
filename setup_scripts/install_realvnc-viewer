@@ -1,0 +1,27 @@
+#!/bin/bash
+
+echo "-------------------------"
+echo "Installing RealVNC Viewer"
+echo "-------------------------"
+echo
+
+cd /tmp
+
+echo
+echo "Downloading software from realvnc.com"
+echo
+wget https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.17.1113-Linux-x64.deb
+
+echo
+echo "Installing..."
+echo
+sudo dpkg -i VNC-Viewer*.deb
+
+echo
+echo "cleaning up..."
+rm VNC-Viewer*.deb
+
+echo
+cd /media/kevin/DEV.SSD/ubuntu/setup_scripts
+echo "...DONE..."
+

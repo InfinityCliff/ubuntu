@@ -1,0 +1,56 @@
+#!/bin/bash
+
+echo
+echo "--------------"
+echo "Installing git"
+echo "--------------"
+echo
+
+sudo apt-get install git
+
+echo
+echo "-----------------"
+echo "Installing Etcher"
+echo "-----------------"
+echo
+
+echo
+echo "Adding Etcher repository"
+sudo add-apt-repository 'deb https://dl.bintray.com/resin-io/debian stable etcher' 
+
+echo
+echo "Adding Etcher repository key"
+sudo apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 379CE192D401AB61
+
+echo
+echo "Update packages list"
+sudo apt-get update
+
+echo
+echo "Installing Etcher"
+sudo apt-get -y install etcher-electron
+
+echo
+echo "--------------------"
+echo "Installing FileZilla"
+echo "--------------------"
+echo
+
+sudo apt-get -y install filezilla
+
+echo
+echo "----------------"
+echo "Installing Putty"
+echo "----------------"
+echo
+
+sudo apt-get -y install putty
+
+echo
+echo "--------------"
+echo "Installing Zim"
+echo "--------------"
+echo
+
+sudo apt-get -y install zim
+

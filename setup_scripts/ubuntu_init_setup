@@ -1,0 +1,32 @@
+#!/bin/bash
+
+
+echo "----------------------------"
+echo "Move Window Buttons to right"
+echo "----------------------------"
+echo
+echo "Current window control layout"
+gsettings get org.gnome.desktop.wm.preferences button-layout
+echo
+echo "Moving window control layout..."
+gsettings set org.gnome.desktop.wm.preferences button-layout ':close,minimize,maximize'
+echo
+echo "New window control layout"
+gsettings get org.gnome.desktop.wm.preferences button-layout
+
+echo
+echo "-----------------------"
+echo "Move Launcher to Bottom"
+echo "-----------------------"
+echo
+echo "Moving Launcher to Bottom..."
+gsettings set com.canonical.Unity.Launcher launcher-position Bottom
+
+echo
+echo "----------------------"
+echo "Set Launcher Icon size"
+echo "----------------------"
+echo
+echo "Setting Icon Launcer size to 20"
+gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ icon-size 20
+echo

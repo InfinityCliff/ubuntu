@@ -1,0 +1,26 @@
+#!/bin/bash
+
+echo "----------------"
+echo "Installing Steam"
+echo "----------------"
+echo
+
+cd /tmp
+
+echo
+echo "Downloading software from http://store.steampowered.com"
+echo
+wget https://steamcdn-a.akamaihd.net/client/installer/steam.deb
+
+echo
+echo "Installing..."
+echo
+sudo dpkg -i steam.deb
+
+echo
+echo "cleaning up..."
+rm steam.deb
+
+echo
+cd /media/kevin/DEV.SSD/ubuntu/setup_scripts
+echo "...DONE..."
